@@ -1,0 +1,14 @@
+$fontFamily:Arial,
+Helvetica,
+sans-serif;
+
+
+$fontBig:2.5em;
+$fontSmall:0.8em;
+
+
+
+@mixin fontSize($size:1.4em,$family:$fontFamily){
+  font-family: #{$fontFamily};
+  font-size: #{$size};
+}

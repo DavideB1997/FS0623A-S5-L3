@@ -1,0 +1,17 @@
+@mixin animazione ($cadutaTitolo,$delay){
+ animation-name: $cadutaTitolo;
+ animation-duration: $delay + s;
+}
+
+@keyframes cadutaTitolo {
+  from {transform:translateY(-100px);opacity: 0};
+  to{transform: translateY(0px);opacity:1}
+}
+@keyframes cadutaTesto {
+  from {transform:translateY(-30px);opacity: 0};
+  to{transform: translateY(0px);opacity:1}
+}
+@keyframes cadutaImg {
+  from {transform:translateY(-40px);opacity: 0};
+  to{transform: translateY(0px);opacity:1}
+}

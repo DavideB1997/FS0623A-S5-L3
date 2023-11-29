@@ -1,0 +1,117 @@
+@import "assets/css/partials/font";
+@import "assets/css/partials/spaziature";
+@import "assets/css/partials/colori";
+@import "assets/css/partials/mixings";
+@import "assets/css/partials/bottoni";
+@import "assets/css/partials/animazioni";
+
+
+body{
+  color: $textColor;
+  @include fontSize();
+}
+
+a{
+  color: $textColor;
+}
+
+header{
+  @include spaziature;
+  background-color: $bgHero;
+  
+  display: flex;
+  justify-content: space-between;
+  nav{
+    display: flex;
+    flex-direction: row;
+    ul li{
+      display: inline-block;
+    }
+  }
+}
+
+.containerBottoni{
+  @include animazione(cadutaTesto, 2);
+  button:nth-child(1){
+    @include bottone($btnBlue)
+  }
+  button:nth-child(2){
+    @include bottone($btnGreen)
+  }
+  button:nth-child(3){
+    @include bottone($btnOrange)
+  }
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero{
+  padding:$paddingHero;
+  background-color: $bgHero;
+  display: flex;
+  justify-content: center;
+  
+  article{
+    flex-basis: 40%;
+    h1{
+      @include animazione(cadutaTitolo,3);
+      @include fontSize($fontBig);
+      font-weight:900;
+      color: $colorH1;
+      padding-bottom:0.4em;
+    }
+    p{
+      @include animazione(cadutaTesto, 2);
+      @include fontSize($fontSmall);
+      padding-bottom:0.6em;
+    }
+  }
+  img{
+    @include animazione(cadutaImg, 4);
+    @include floating;
+    width:60%;
+    flex-basis: 50%;
+  }
+}
+
+section div{
+  @include spaziature;
+  @include grid(20);
+  div{
+    @include spaziature();
+    img{
+      @include floating();
+      border: none;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .hero {
+    flex-direction: column
+  }
+
+  .hero {
+    padding: 1em
+  }
+
+  .hero img {
+    margin-top: 4em;
+    width: 100%
+  }
+
+  section div {
+      flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+  section div div{
+      flex-basis: 40%;
+    }
+}

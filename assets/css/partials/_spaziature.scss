@@ -1,0 +1,28 @@
+//generale
+$padding:1.3em;
+$paddingHero:3em;
+$paddingGrid:1em;
+
+@mixin spaziature {
+  padding: $padding;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+
+@mixin spaziatureHero {
+  padding: $paddingHero;
+}
+
+@mixin spaziature {
+  padding: $paddingGrid;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+}
+
+
+//bottoni
+$paddingBtn:1em;
+
+
+

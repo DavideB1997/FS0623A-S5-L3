@@ -1,0 +1,10 @@
+$borderRadius: 8px;
+
+
+@mixin bottone($colore){
+  padding: $paddingBtn;
+  background-color: $colore;
+  color: $textColor;
+  border: none;
+  border-radius: $borderRadius;
+}
